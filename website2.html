@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Register form</title>
+        <style>
+            #grad1 {
+                height: 200px;
+                background-image: linear-gradient(to right, rgb(244, 184, 220), rgb(193, 10, 193));
+            }
+            #grad2 {
+                height: 500px;
+                background-image: linear-gradient(to right, antiquewhite);
+                width: 500px;
+            }
+            #div {
+                box-shadow: 10px 10px rgb(173, 230, 218);
+            }
+        </style>
+        <script>
+            function myfun() {
+                var a = document.getElementById("i1").value;
+                var b = document.getElementById("i2").value;
+                var c = document.getElementById("i3").value;
+                var d = document.getElementById("i4").value;
+                var gender = document.querySelector('input[name="gender"]:checked').value;
+                console.log(a);
+                console.log(b);
+                console.log(c); 
+                console.log(d);
+                console.log(gender);
+                document.getElementById("i11").innerHTML = `Name: ${a} <br> Username: ${b} <br> Email: ${c} <br> Mobile number: ${d}<b> Gender: ${gender}`;
+
+            }
+        </script>
+    </head>
+    <body id="grad1">
+        <center>
+            <table id="grad2" style="background-color: antiquewhite;" border="0">
+                <tr><td><h1><b>Registration</b></h1></td></tr>
+                <tr>
+                    <td><b>Full Name</b><br><input type="text" placeholder="Enter your full name" id="i1"/></td>
+                    <td><b>Username</b><br><input type="text" placeholder="Enter your username" id="i2"/></td>
+                </tr>
+                <tr>
+                    <td><b>Email</b><br><input type="email" placeholder="Enter your email id" id="i3"/></td>
+                    <td><b>Mobile Number</b><br><input type="number" placeholder="Enter your phone number" id="i4"/></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b><br><input type="password" placeholder="Enter the password" id="i6"/></td>
+                    <td><b>Confirm Password</b><br><input type="password" placeholder="Confirm password" id="i7"/></td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="gender" value="Female" id="i8" checked/><label>Female</label></td>
+                    <td><input type="radio" name="gender" value="Male" id="i9"/><label>Male</label></td>
+                    <td><input type="radio" name="gender" value="Others" id="i10"/><label>Others</label></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="7" style="background-image: linear-gradient(to right, rgb(117, 196, 238), rgb(18, 65, 95));">
+                        <label><b>Register</b></label><br>&nbsp;<input type="button" name="Register" value="Register" id="submit" onclick="myfun()"/>
+                    </td>
+                </tr>
+            </table>
+            <p id="i11"></p>
+        </center>
+    </body>
+</html>
